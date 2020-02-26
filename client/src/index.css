@@ -66,6 +66,15 @@ body {
   color: white;
 }
 
+.update-button{
+  position: absolute;
+  top: 25px;
+  right: 85px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
