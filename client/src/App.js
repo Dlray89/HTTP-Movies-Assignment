@@ -9,6 +9,7 @@ import UpdateForm from "./Movies/UpdateList";
 const App = () => {
   const [savedList, setSavedList] = useState([]);
   const [movieList, setMovieList] = useState([]);
+  const [updateList, setUpdateList] = useState(false)
 
   const getMovieList = () => {
     axios
@@ -34,11 +35,14 @@ const App = () => {
       </Route>
 
       <Route path="/movies/:id">
-        <Movie addToSavedList={addToSavedList} />
+        <Movie addToSavedList={addToSavedList}
+        updateList={updateList}
+        setUpdateList={setUpdateList} />
       </Route>
-      <Route path ="/update-movie/:id">
-        <Movie updateToList={UpdateForm} />
-      </Route>
+      
+      <Route path ="/update-movie/:id" 
+        render={props => <UpdateForm {...props} />}
+      />
      
     </>
   );

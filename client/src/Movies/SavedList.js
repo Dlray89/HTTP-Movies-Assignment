@@ -19,9 +19,7 @@ function SavedList({ list }) {
       <div className="home-button">
         <Link to="/">Home</Link>
       </div>
-      <div className="update">
-        <Link to="/update-movie/:id">Update</Link>
-      </div>
+  
     </div>
   );
 }
